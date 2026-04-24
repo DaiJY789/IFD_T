@@ -1,0 +1,14 @@
+# Training artifacts
+outputs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# OS/Editor
+.DS_Store
+.vscode/

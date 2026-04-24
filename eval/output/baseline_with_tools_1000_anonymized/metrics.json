@@ -1,0 +1,124 @@
+{
+  "timestamp": "2026-04-18T15:30:27",
+  "eval_input": "/ssd/jydai/data/IFD_T/ifd_t_105k_v1/eval_sample_1000_anonymized/eval_anonymized.parquet",
+  "num_samples": 1000,
+  "request_ok": 1000,
+  "request_success_rate": 1.0,
+  "json_ok": 1000,
+  "json_fail": 0,
+  "json_success_rate": 1.0,
+  "avg_latency_ms": 15795.738,
+  "elapsed_seconds": 15796.896,
+  "avg_tool_calls": 3.478,
+  "chat_endpoint": "http://127.0.0.1:8011/v1/chat/completions",
+  "model_name": "Qwen3vl8b_Tool",
+  "tool_config": "/mydata/home/yxzhou/jydai/work/IFD_T/tools/verl_tool_config.yaml",
+  "tool_index": -1,
+  "active_tools": [
+    "spectrum_grid_analyzer",
+    "facial_biological_auditor",
+    "roi_extractor",
+    "image_resizer",
+    "visual_enhancer",
+    "srm_filter",
+    "noise_analyzer",
+    "patchdense_scanner",
+    "cfa_validator"
+  ],
+  "tool_call_counts": {
+    "spectrum_grid_analyzer": 997,
+    "facial_biological_auditor": 460,
+    "roi_extractor": 886,
+    "srm_filter": 482,
+    "noise_analyzer": 536,
+    "visual_enhancer": 95,
+    "sr_m_filter": 19,
+    "cfa_validator": 2,
+    "patchdense_scanner": 1
+  },
+  "label_metrics": {
+    "accuracy": 0.579,
+    "macro_f1": 0.4062529564480287,
+    "per_label": {
+      "authentic": {
+        "precision": 0.41761363636363635,
+        "recall": 0.6150627615062761,
+        "f1": 0.49746192893401014
+      },
+      "tampered": {
+        "precision": 0.3333333333333333,
+        "recall": 0.532608695652174,
+        "f1": 0.4100418410041841
+      },
+      "ai_manipulated": {
+        "precision": 0.943502824858757,
+        "recall": 0.5788561525129983,
+        "f1": 0.7175080558539206
+      },
+      "uncertain": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion_matrix": {
+      "authentic": {
+        "authentic": 147,
+        "tampered": 86,
+        "ai_manipulated": 6,
+        "uncertain": 0
+      },
+      "tampered": {
+        "authentic": 72,
+        "tampered": 98,
+        "ai_manipulated": 14,
+        "uncertain": 0
+      },
+      "ai_manipulated": {
+        "authentic": 133,
+        "tampered": 110,
+        "ai_manipulated": 334,
+        "uncertain": 0
+      },
+      "uncertain": {
+        "authentic": 0,
+        "tampered": 0,
+        "ai_manipulated": 0,
+        "uncertain": 0
+      }
+    }
+  },
+  "ai_type_metrics": {
+    "accuracy": 0.02772963604852686,
+    "macro_f1": 0.029684601113172542,
+    "per_label": {
+      "ai_generated": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "ai_eited": {
+        "precision": 0.04790419161676647,
+        "recall": 0.07804878048780488,
+        "f1": 0.059369202226345084
+      }
+    },
+    "confusion_matrix": {
+      "ai_generated": {
+        "ai_generated": 0,
+        "ai_eited": 318,
+        "": 54
+      },
+      "ai_eited": {
+        "ai_generated": 0,
+        "ai_eited": 16,
+        "": 189
+      }
+    }
+  },
+  "joint_accuracy": 0.261,
+  "outputs": {
+    "predictions": "/mydata/home/yxzhou/jydai/work/IFD_T/eval/output/baseline_with_tools_1000_anonymized/predictions.jsonl",
+    "metrics": "/mydata/home/yxzhou/jydai/work/IFD_T/eval/output/baseline_with_tools_1000_anonymized/metrics.json"
+  }
+}

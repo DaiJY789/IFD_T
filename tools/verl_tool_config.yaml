@@ -1,0 +1,86 @@
+tools:
+  - class_name: "tools.AM.Spectrum_Grid_Analyzer.SpectrumGridAnalyzerTool"
+    config:
+      type: native
+      default_peak_sigma: 3.4
+      default_center_exclusion_ratio: 0.08
+      default_energy_hole_sensitivity: 2.2
+      default_max_side: 768
+      default_export_map: true
+      output_dir: "./outputs/spectrum_grid_analyzer"
+
+  - class_name: "tools.AM.Facial_Biological_Auditor.FacialBiologicalAuditorTool"
+    config:
+      type: native
+      default_keypoint_backend: "auto"
+      default_max_side: 768
+      default_reflection_angle_threshold_deg: 18.0
+      default_reflection_mag_ratio_threshold: 1.8
+      default_texture_blur_ratio_threshold: 0.45
+      default_export_mask: true
+      output_dir: "./outputs/facial_biological_auditor"
+
+  - class_name: "tools.GE.ROI_Extractor.ROIExtractorTool"
+    config:
+      type: native
+      default_export_crop: true
+      default_export_global_mask: true
+      default_mask_threshold: 0.5
+      output_dir: "./outputs/roi_extractor"
+
+  - class_name: "tools.GE.Image_Resizer.ImageResizerTool"
+    config:
+      type: native
+      default_interpolation: "nearest"
+      default_prefer_forensics_mode: "auto"
+      default_keep_aspect_ratio: true
+      default_output_format: "PNG"
+      default_jpeg_quality: 95
+      output_dir: "./outputs/image_resizer"
+
+  - class_name: "tools.GE.Visual_Enhancer.VisualEnhancerTool"
+    config:
+      type: native
+      default_method: "clahe"
+      default_clip_limit: 2.0
+      default_tile_grid_size: 8
+      default_brightness_gain: 1.0
+      default_contrast_gain: 1.0
+      default_gamma: 1.0
+      default_output_format: "PNG"
+      default_jpeg_quality: 95
+      output_dir: "./outputs/visual_enhancer"
+
+  - class_name: "tools.TF.SRM_Filter.SRMFilterTool"
+    config:
+      type: native
+      default_truncate_threshold: 3.0
+      default_export_map: true
+      output_dir: "./outputs/srm_filter"
+
+  - class_name: "tools.TF.Noise_Analyzer.NoiseAnalyzerTool"
+    config:
+      type: native
+      default_window_size: 9
+      default_levels: 2
+      default_export_map: true
+      output_dir: "./outputs/noise_analyzer"
+
+  - class_name: "tools.TF.PatchDense_Scanner.PatchDenseScannerTool"
+    config:
+      type: native
+      default_patch_size: 7
+      default_iterations: 3
+      default_consistency_threshold: 0.7
+      default_max_side: 320
+      default_export_map: true
+      output_dir: "./outputs/patchdense_scanner"
+
+  - class_name: "tools.TF.CFA_Validator.CFAValidatorTool"
+    config:
+      type: native
+      default_window_size: 7
+      default_prob_threshold: 0.75
+      default_max_side: 512
+      default_export_map: true
+      output_dir: "./outputs/cfa_validator"

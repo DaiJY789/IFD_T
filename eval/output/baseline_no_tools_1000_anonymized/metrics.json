@@ -1,0 +1,99 @@
+{
+  "timestamp": "2026-04-18T12:39:55",
+  "eval_input": "/ssd/jydai/data/IFD_T/ifd_t_105k_v1/eval_sample_1000_anonymized/eval_anonymized.parquet",
+  "num_samples": 1000,
+  "request_ok": 1000,
+  "request_success_rate": 1.0,
+  "avg_latency_ms": 5008.725,
+  "elapsed_seconds": 5009.663,
+  "chat_endpoint": "http://127.0.0.1:8010/v1/chat/completions",
+  "model_name": "Qwen3vl8b",
+  "label_metrics": {
+    "accuracy": 0.471,
+    "macro_f1": 0.31625788334593996,
+    "per_label": {
+      "authentic": {
+        "precision": 0.38,
+        "recall": 0.8744769874476988,
+        "f1": 0.5297845373891003
+      },
+      "tampered": {
+        "precision": 0.5333333333333333,
+        "recall": 0.08695652173913043,
+        "f1": 0.14953271028037382
+      },
+      "ai_manipulated": {
+        "precision": 0.935361216730038,
+        "recall": 0.42634315424610053,
+        "f1": 0.5857142857142857
+      },
+      "uncertain": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion_matrix": {
+      "authentic": {
+        "authentic": 209,
+        "tampered": 5,
+        "ai_manipulated": 6,
+        "uncertain": 1,
+        "": 18
+      },
+      "tampered": {
+        "authentic": 125,
+        "tampered": 16,
+        "ai_manipulated": 11,
+        "uncertain": 0,
+        "": 32
+      },
+      "ai_manipulated": {
+        "authentic": 216,
+        "tampered": 9,
+        "ai_manipulated": 246,
+        "uncertain": 9,
+        "": 97
+      },
+      "uncertain": {
+        "authentic": 0,
+        "tampered": 0,
+        "ai_manipulated": 0,
+        "uncertain": 0
+      }
+    }
+  },
+  "ai_type_metrics": {
+    "accuracy": 0.4072790294627383,
+    "macro_f1": 0.38025889967637544,
+    "per_label": {
+      "ai_generated": {
+        "precision": 0.9552845528455285,
+        "recall": 0.6317204301075269,
+        "f1": 0.7605177993527509
+      },
+      "ai_eited": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion_matrix": {
+      "ai_generated": {
+        "ai_generated": 235,
+        "ai_eited": 0,
+        "": 137
+      },
+      "ai_eited": {
+        "ai_generated": 11,
+        "ai_eited": 0,
+        "": 194
+      }
+    }
+  },
+  "joint_accuracy": 0.46,
+  "outputs": {
+    "predictions": "/mydata/home/yxzhou/jydai/work/IFD_T/eval/output/baseline_no_tools_1000_anonymized/predictions.jsonl",
+    "metrics": "/mydata/home/yxzhou/jydai/work/IFD_T/eval/output/baseline_no_tools_1000_anonymized/metrics.json"
+  }
+}
